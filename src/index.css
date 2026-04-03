@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3D Portfolio Design System - Colorful & Bold */
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 270 76% 68%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 330 80% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --success: 142 76% 50%;
+    --success-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 239 84% 67%;
+
+    --radius: 0.75rem;
+
+    /* Custom 3D portfolio tokens */
+    --gradient-start: 239 84% 67%;
+    --gradient-mid: 270 76% 68%;
+    --gradient-end: 330 80% 60%;
+    
+    --glow-primary: 239 84% 67%;
+    --glow-secondary: 270 76% 68%;
+    --glow-accent: 330 80% 60%;
+
+    --sidebar-background: 240 10% 6%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 239 84% 67%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 10% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 10% 20%;
+    --sidebar-ring: 239 84% 67%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 270 76% 68%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 330 80% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --success: 142 76% 50%;
+    --success-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 239 84% 67%;
+
+    --sidebar-background: 240 10% 6%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 239 84% 67%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 10% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 10% 20%;
+    --sidebar-ring: 239 84% 67%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--secondary)) 50%,
+      hsl(var(--accent)) 100%
+    );
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(
+      ellipse at center,
+      hsl(var(--primary) / 0.15) 0%,
+      transparent 70%
+    );
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.4),
+                0 0 80px hsl(var(--primary) / 0.2);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 40px hsl(var(--secondary) / 0.4),
+                0 0 80px hsl(var(--secondary) / 0.2);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 40px hsl(var(--accent) / 0.4),
+                0 0 80px hsl(var(--accent) / 0.2);
+  }
+
+  .glass {
+    @apply backdrop-blur-xl bg-card/30 border border-border/50;
+  }
+}
