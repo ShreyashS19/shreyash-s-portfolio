@@ -19,7 +19,7 @@ const projects = [
     tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
     gradient: 'from-primary to-secondary',
     features: ['Role-based access control', 'Real-time notifications', 'Payment integration', 'Analytics dashboard'],
-    
+    link : 'https://smart-service-hub-local-service-boo.vercel.app/',
     github: 'https://github.com/ShreyashS19/Smart-Service-Hub-Local-Service-Booking-Platform-.git',
     showLinks: true,
   },
@@ -327,19 +327,34 @@ export const ProjectsSection = () => {
                 </div>
               </div>
 
-              {selectedProject.showLinks && selectedProject.github && (
-                <div className="flex gap-4 mt-6">
-                  <motion.a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 rounded-full glass text-foreground text-sm font-semibold hover:bg-muted transition-colors"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Github className="w-4 h-4" />
-                    View on GitHub
-                  </motion.a>
+              {selectedProject.showLinks && (selectedProject.github || ('link' in selectedProject && selectedProject.link)) && (
+                <div className="flex flex-wrap gap-4 mt-6">
+                  {'link' in selectedProject && selectedProject.link && (
+                    <motion.a
+                      href={selectedProject.link as string}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground border border-primary text-sm font-semibold hover:bg-primary/90 transition-colors shadow-sm"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </motion.a>
+                  )}
+                  {selectedProject.github && (
+                    <motion.a
+                      href={selectedProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-full glass border border-border/50 text-foreground text-sm font-semibold hover:bg-muted transition-colors shadow-sm"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Github className="w-4 h-4" />
+                      View on GitHub
+                    </motion.a>
+                  )}
                 </div>
               )}
             </>
