@@ -19,22 +19,47 @@ const projects = [
     tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
     gradient: 'from-primary to-secondary',
     features: ['Role-based access control', 'Real-time notifications', 'Payment integration', 'Analytics dashboard'],
-    link: '#',
-    github: '#',
+    
+    github: 'https://github.com/ShreyashS19/Smart-Service-Hub-Local-Service-Booking-Platform-.git',
     showLinks: true,
   },
   {
+    // id: 2,
+    // title: 'Customer Churn Prediction',
+    // description: 'ML-powered system to predict and prevent customer churn.',
+    // longDescription: 'Developed a machine learning pipeline that analyzes customer behavior patterns to predict churn probability. Achieved 92% accuracy using ensemble methods and deployed via REST API.',
+    // tags: ['Python', 'TensorFlow', 'FastAPI', 'Docker'],
+    // gradient: 'from-secondary to-accent',
+    // features: ['Data preprocessing pipeline', 'Model training & evaluation', 'REST API deployment', 'Interactive dashboard'],
+    // // link: '#',
+    // github: '#',
+    // showLinks: true,
     id: 2,
-    title: 'Customer Churn Prediction',
-    description: 'ML-powered system to predict and prevent customer churn.',
-    longDescription: 'Developed a machine learning pipeline that analyzes customer behavior patterns to predict churn probability. Achieved 92% accuracy using ensemble methods and deployed via REST API.',
-    tags: ['Python', 'TensorFlow', 'FastAPI', 'Docker'],
-    gradient: 'from-secondary to-accent',
-    features: ['Data preprocessing pipeline', 'Model training & evaluation', 'REST API deployment', 'Interactive dashboard'],
-    link: '#',
-    github: '#',
-    showLinks: true,
+title: 'AI-Powered Customer Churn Prediction',
+description: 'End-to-end ML + Explainable AI system with real-time analytics dashboard and business insights.',
+
+longDescription: 'Built a full-stack AI system to predict customer churn using an ExtraTrees ensemble model achieving 99.1% accuracy and ~0.98 AUC. Implemented an end-to-end ML pipeline with SMOTE balancing, feature engineering, and preprocessing. Integrated SHAP Explainable AI for model transparency and real-time customer-level insights. Developed a scalable Flask backend with asynchronous processing and a modern React dashboard for visualization, CSV upload, and analytics. Added LLM-powered business insights (Llama 3.3 via Groq) to generate actionable retention strategies.',
+
+tags: ['Python', 'Flask', 'React', 'TypeScript', 'Scikit-learn', 'SHAP', 'TailwindCSS', 'LLM', 'Docker'],
+
+gradient: 'from-secondary to-accent',
+
+features: [
+  '99.1% accurate ML model with SMOTE & ensemble learning',
+  'Explainable AI using SHAP (feature importance + customer insights)',
+  'LLM-generated business recommendations (Groq Llama 3.3)',
+  'Real-time prediction tracking with background processing',
+  'CSV upload, batch prediction & result download',
+  'Interactive dashboard with charts & model insights',
+  'Session-based analytics with caching optimization',
+  'Individual customer churn explanation system'
+],
+
+// link: '#',
+github: 'https://github.com/ShreyashS19/bank-churn-prediction-ai.git',
+showLinks: true,
   },
+
   {
     id: 3,
     title: 'Bank Simulator',
@@ -43,8 +68,8 @@ const projects = [
     tags: ['Java', 'Spring Boot', 'MySQL', 'JUnit'],
     gradient: 'from-accent to-primary',
     features: ['Account management', 'Transaction processing', 'Email automation', 'Unit & integration tests'],
-    link: '#',
-    github: '#',
+    //link: '#',
+    github: 'https://github.com/ShreyashS19/Bank-Simulator-Intern.git',
     showLinks: true,
   },
   {
